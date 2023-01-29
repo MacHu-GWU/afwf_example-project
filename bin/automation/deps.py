@@ -7,7 +7,7 @@ Dependencies management
 import typing as T
 import json
 import subprocess
-from pathlib import Path
+from pathlib_mate import Path
 
 from .paths import (
     dir_project_root,
@@ -124,7 +124,7 @@ def _poetry_export(poetry_lock_hash: str):
         path_requirements_doc,
     ]
     for path in path_list:
-        path.unlink(missing_ok=True)
+        path.remove_if_exists()
 
     logger.info(f"export to {path_requirements_main.name}")
     subprocess.run(
