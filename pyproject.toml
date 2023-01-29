@@ -7,11 +7,14 @@ authors = ["Sanhe Hu <husanhe@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "3.8.*"
-afwf = "0.1.1"
+afwf = "0.2.1"
 attrs = "21.4.0"
 attrs_mate = "1.0.2"
 pathlib_mate = " 1.2.1"
 diskcache = "5.4.0"
+sqlitedict = "2.1.0"
+python-Levenshtein = "0.20.9"
+fuzzywuzzy = "0.18.0"
 
 
 [tool.poetry.dev-dependencies]

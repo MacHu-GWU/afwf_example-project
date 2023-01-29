@@ -85,3 +85,19 @@ def refresh_code():
             f"--target={dir_workflow_lib}",
         ]
         subprocess.run(args)
+
+
+def debug(
+    bin_python: str,
+    handler_id: str,
+    query: str,
+):
+    args = [
+        bin_python,
+        "main.py",
+        f'{handler_id} {query}',
+    ]
+    cmd = " ".join(args)
+    logger.info(f"run: {cmd}")
+    with config.dir_workflow.temp_cwd():
+        subprocess.run(args)
