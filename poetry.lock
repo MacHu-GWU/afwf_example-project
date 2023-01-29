@@ -1,6 +1,6 @@
 [[package]]
 name = "afwf"
-version = "0.2.1"
+version = "0.2.2"
 description = "Alfred Workflow Script Filter power tool.."
 category = "main"
 optional = false
@@ -925,12 +925,12 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.*"
-content-hash = "aa005f263fadb508a8e4fbaf7569a2261661bf8f4de03733dc177698e5f67c0b"
+content-hash = "058f1ec9b402398ab9e9890ab74c8610eaf75da4c86b490fb1609c4099ace96d"
 
 [metadata.files]
 afwf = [
-    {file = "afwf-0.2.1-py2.py3-none-any.whl", hash = "sha256:bea7198c9711d9b3a8ecaf46e33e7bfd5d2917fc109b47a0c97141ec5cef968a"},
-    {file = "afwf-0.2.1.tar.gz", hash = "sha256:5cfd54b9818eed7b9d8d7741747734c79ccbc91b6743e48ef330ccb5c09386f4"},
+    {file = "afwf-0.2.2-py2.py3-none-any.whl", hash = "sha256:8c40abd3a1260f843e321a6334ed3b11e9541d31e4befe8446a7c712d3bfaa15"},
+    {file = "afwf-0.2.2.tar.gz", hash = "sha256:11e6e3d639a22aa3412536ef029e096b6fdca8226bb7c5d5c19bf202ef7fcb98"},
 ]
 alabaster = [
     {file = "alabaster-0.7.13-py3-none-any.whl", hash = "sha256:1ee19aca801bbabb5ba3f5f258e4422dfa86f82f3e9cefb0859b283cdd7f62a3"},

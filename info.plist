@@ -47,6 +47,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3A99C445-7D87-4E68-AFEB-5BCF832A624A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>49C73068-72F6-4117-B35E-9B17C5BDAC60</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3D612075-778A-4380-9A57-7F68CD611C4B</key>
 		<array>
 			<dict>
@@ -249,7 +262,7 @@
 				<key>openwith</key>
 				<string></string>
 				<key>sourcefile</key>
-				<string>{var:open_log_file_path}</string>
+				<string>{var:_open_log_file_path}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openfile</string>
@@ -265,7 +278,7 @@
 				<array>
 					<dict>
 						<key>inputstring</key>
-						<string>{var:open_log_file}</string>
+						<string>{var:_open_log_file}</string>
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>
@@ -319,7 +332,7 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>
@@ -347,7 +360,7 @@
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
@@ -405,7 +418,7 @@
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<false/>
+				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>2</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -515,7 +528,7 @@
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>keyword</key>

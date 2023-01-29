@@ -63,13 +63,12 @@ class Handler(afwf.Handler):
     def main(self, content: str) -> afwf.ScriptFilter:
         sf = afwf.ScriptFilter()
         path = dir_project_home / "file.txt"
+        item = afwf.Item(
+            title=f"Write {content!r} to {path.basename}",
+        )
         cmd = write_request_handler.encode_run_script_command(
             bin_python=sys.executable,
             content=content,
-        )
-        item = afwf.Item(
-            title=f"Write {content!r} to {path.basename}",
-            arg=cmd,
         )
         item.run_script(cmd)
         item.send_notification(

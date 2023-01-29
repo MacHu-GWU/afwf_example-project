@@ -68,17 +68,16 @@ class Handler(afwf.Handler):
             sf.items.extend(matcher.match(query=key))
         else:
             if key in SettingsKeyEnum.__members__:
+                item = afwf.Item(
+                    title=f"Set settings.{key} = {value!r}",
+                )
+                item.send_notification(
+                    title=f"Set settings.{key} = {value!r}",
+                )
                 cmd = set_setting_value_handler.encode_run_script_command(
                     bin_python=sys.executable,
                     key=key,
                     value=value,
-                )
-                item = afwf.Item(
-                    title=f"Set settings.{key} = {value!r}",
-                    arg=cmd,
-                )
-                item.send_notification(
-                    title=f"Set settings.{key} = {value!r}",
                 )
                 item.run_script(cmd)
                 sf.items.append(item)
