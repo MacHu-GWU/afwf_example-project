@@ -5,15 +5,16 @@ Automation config management.
 """
 
 import dataclasses
+from pathlib_mate import Path
 
 
 @dataclasses.dataclass
 class AutomationConfig:
-    python_version: str = dataclasses.field()
-    package_name: str = dataclasses.field()
+    dir_workflow: Path = dataclasses.field()
 
 
 config = AutomationConfig(
-    python_version="3.8",
-    package_name="aws_idp_doc_store",
+    dir_workflow=Path(
+        "/Users/sanhehu/Documents/Alfred-Preferences/Alfred.alfredpreferences/workflows/user.workflow.BE825014-E97C-4213-BEFE-E652C1C83974"
+    ),
 )

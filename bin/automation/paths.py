@@ -61,3 +61,9 @@ path_current_env_name_json = dir_project_root / ".current-env-name.json"
 # ------------------------------------------------------------------------------
 dir_build = dir_project_root / "build"
 dir_dist = dir_project_root / "dist"
+
+# ------------------------------------------------------------------------------
+# Alfred Related
+# ------------------------------------------------------------------------------
+path_git_repo_info_plist = dir_project_root / "info.plist"
+path_git_repo_main_py = dir_project_root / "main.py"

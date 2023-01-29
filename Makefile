@@ -52,3 +52,11 @@ cov: install install-test cov-only ## ** Run code coverage test
 
 cov-only: ## Run code coverage test without checking test dependencies
 	./.venv/bin/python ./bin/s03_2_run_cov_test.py
+
+
+build-wf: ## ** Build Alfred Workflow release from source code
+	python ./bin/s05_1_build_wf.py
+
+
+refresh-code: ## ** Refresh Alfred Workflow source code
+	python ./bin/s05_2_refresh_code.py
