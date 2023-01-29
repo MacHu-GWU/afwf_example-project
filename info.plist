@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>MacHu-GWU.afwf_example</string>
 	<key>connections</key>
 	<dict>
 		<key>216C6557-8954-4EEB-B6DF-FD14A67D0A14</key>
@@ -190,7 +190,7 @@
 	<key>createdby</key>
 	<string>Sanhe Hu</string>
 	<key>description</key>
-	<string>Alfred Workflow project based on afwf python library</string>
+	<string>Alfred Workflow example project based on afwf python library</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
