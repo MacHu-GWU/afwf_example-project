@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+"""
+[CN]
+
+该 Script Filter 的功能是让用户对用作 settings 的 sqlite 进行读写.
+"""
+
 import typing as T
 import sys
 
@@ -15,6 +21,7 @@ class SetSettingValueHandler(afwf.Handler):
     def main(self, key: str, value: str) -> afwf.ScriptFilter:
         sf = afwf.ScriptFilter()
         settings[key] = value
+        print(f"key = {key}, value = {value}")
         return sf
 
     def parse_query(self, query: str):
@@ -61,16 +68,17 @@ class Handler(afwf.Handler):
             sf.items.extend(matcher.match(query=key))
         else:
             if key in SettingsKeyEnum.__members__:
-                item = afwf.Item(
-                    title=f"Set settings.{key} = {value!r}",
-                )
-                item.send_notification(
-                    title=f"Set settings.{key} = {value!r}",
-                )
                 cmd = set_setting_value_handler.encode_run_script_command(
                     bin_python=sys.executable,
                     key=key,
                     value=value,
+                )
+                item = afwf.Item(
+                    title=f"Set settings.{key} = {value!r}",
+                    arg=cmd,
+                )
+                item.send_notification(
+                    title=f"Set settings.{key} = {value!r}",
                 )
                 item.run_script(cmd)
                 sf.items.append(item)

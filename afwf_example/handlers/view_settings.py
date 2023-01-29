@@ -12,7 +12,6 @@ class Handler(afwf.Handler):
         sf = afwf.ScriptFilter()
         for settings_key in SettingsKeyEnum:
             value = settings.get(settings_key.value)
-            print(value)
             item = afwf.Item(
                 title=f"settings.{settings_key} = {value!r}",
             )

@@ -26,11 +26,10 @@ class Handler(afwf.Handler):
                 subtitle=content,
             )
         else:
-            content = "file.txt does not exist!"
             item = afwf.Item(
-                title=f"Write {content!r} to {path.basename}",
-                arg=f"{sys.executable} main.py 'write_request_handler {content}'",
-            ).set_icon(afwf.IconFileEnum.error)
+                title="file.txt does not exist!",
+            )
+            item.set_icon(afwf.IconFileEnum.error)
 
         sf.items.append(item)
         return sf

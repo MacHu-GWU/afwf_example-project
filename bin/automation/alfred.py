@@ -6,10 +6,8 @@ from .paths import (
     PACKAGE_NAME,
     bin_pip,
     dir_project_root,
-    dir_python_lib,
     path_git_repo_main_py,
     path_git_repo_info_plist,
-    path_requirements_main,
 )
 from .deps import _try_poetry_export
 from .logger import logger
@@ -87,15 +85,26 @@ def refresh_code():
         subprocess.run(args)
 
 
+@logger.pretty_log(
+    start_msg="🪲 Debug Script Filter",
+    end_msg="🪲 End 'Debug Script Filter', elapsed = {elapsed} sec",
+)
 def debug(
     bin_python: str,
     handler_id: str,
     query: str,
 ):
+    """
+    This is a utility function to debug an Alfred Workflow.
+
+    :param bin_python:
+    :param handler_id:
+    :param query:
+    """
     args = [
         bin_python,
         "main.py",
-        f'{handler_id} {query}',
+        f"{handler_id} {query}",
     ]
     cmd = " ".join(args)
     logger.info(f"run: {cmd}")
