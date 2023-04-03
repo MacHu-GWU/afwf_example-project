@@ -49,7 +49,7 @@ Automation Config
 
 The Workflow Entry Point - main.py
 ------------------------------------------------------------------------------
-在项目的根目录下有一个 `main.py <../main.py>` 文件. 这个文件是 Alfred Workflow 的入口脚本. , 也是 Alfred Workflow 的主要逻辑. 请跳转到文件的内容查看注释了解它的功能.
+在项目的根目录下有一个 `main.py <../main.py>`_ 文件. 这个文件是 Alfred Workflow 的入口脚本. , 也是 Alfred Workflow 的主要逻辑. 请跳转到文件的内容查看注释了解它的功能.
 
 
 The Workflow Source Code
@@ -64,3 +64,8 @@ The Workflow Source Code
 - `write_file.py <../afwf_example/handlers/write_file.py>`_: 对文件的内容进行写入.
 - `set_settings.py <../afwf_example/handlers/set_settings.py>`_: 对数据库进行写入.
 - `view_settings.py <../afwf_example/handlers/view_settings.py>`_: 对数据库进行读取.
+
+
+Next
+------------------------------------------------------------------------------
+`Debug Guide <./04-Debug-Guide.rst>`_

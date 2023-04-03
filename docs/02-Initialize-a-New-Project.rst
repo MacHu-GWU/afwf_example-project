@@ -16,3 +16,8 @@ Solution
 
 1. 到 ``pyproject.toml`` 中的 ``[tool.poetry.dependencies]`` 一栏中填入你的项目所需的依赖.
 2. 没有了.
+
+
+Next
+------------------------------------------------------------------------------
+`Development Guide <./03-Development-Guide.rst>`_
