@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 
+"""
+[CN]
+
+该 Script Filter 的功能是让用户对用作 settings 的 sqlite 进行读取. 可以和 ``set_settings.py``
+模块配合使用查看效果.
+"""
+
 import afwf
 import attr
 

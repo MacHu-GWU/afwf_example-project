@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+This handler will always raise an error. It is used for testing purpose.
+"""
+
 import afwf
 import attr
 from afwf.workflow import log_debug_info
