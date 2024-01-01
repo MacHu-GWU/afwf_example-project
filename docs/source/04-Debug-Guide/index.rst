@@ -15,8 +15,3 @@ afwf 框架中的 `Workflow <https://github.com/MacHu-GWU/afwf-project/blob/main
 2. 你的 `main.py <https://github.com/MacHu-GWU/afwf-project/blob/main/main.py>`_ 文件中 ``wf.run(debug=True)`` 如果设置了 ``debug=True``, 那么你可以用 ``afwf.log_debug_info("message")`` 函数来记录一些调试信息. 这些 debug 日志会以 append only 的形式保存到 ``${HOME}/.alfred-afwf/debug.txt`` 中.
 
 默认 afwf 框架会在出错时返回两个 Item, 一个可以一键打开 ``last-error.txt`` 文件, 一个可以一键打开 ``debug.txt`` 文件. 但是前提你要给你的每个 Script Filter 的后继 Action 连接一个 ``Utilities -> Conditional`` 的控件, 其中 if 的判断值设为 ``{var:_open_log_file}`` (注意下划线), 条件设置为 is equal to "y". 然后连接一个 ``Actions -> Open File`` 的控件, 其中 File 设为 ``{var:_open_log_file_path}`` (注意下划线). 这样就能使得的自动出现的两个用于 debug 的 items 能一键打开日志文件了.
-
-
-Next
-------------------------------------------------------------------------------
-`Unit Test Guide <./05-Unit-Test-Guide.rst>`_

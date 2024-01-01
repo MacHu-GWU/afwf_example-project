@@ -9,11 +9,6 @@ Overview
 
 Example
 ------------------------------------------------------------------------------
-这里我们拿 `memorize_cache.py <../afwf_example/handlers/memorize_cache.py>`_ 为例. 它的核心逻辑是根据 Key 生成一个随机数, 并且缓存 5 秒. 返回的对象是一个 ``ScriptFilter`` 对象, 而这个生成的随机数则保存在 ``ScriptFilter.items`` 列表中.
+这里我们拿 `memorize_cache.py <https://github.com/MacHu-GWU/afwf_example-project/blob/main/afwf_example/handlers/memorize_cache.py>`_ 为例. 它的核心逻辑是根据 Key 生成一个随机数, 并且缓存 5 秒. 返回的对象是一个 ``ScriptFilter`` 对象, 而这个生成的随机数则保存在 ``ScriptFilter.items`` 列表中.
 
-我们再来看 `test_handler_memorize_cache.py <../tests/test_handler_memorize_cache.py>`_ 的测试用例. 测试用例仅仅是用同一个 key 调用了两次 ``main`` 函数, 然后比较 item 的 title 是不是一样. 是一样说明缓存起作用了.
-
-
-Next
-------------------------------------------------------------------------------
-`Release Guide <./06-Release-Guide.rst>`_
+我们再来看 `test_handler_memorize_cache.py <https://github.com/MacHu-GWU/afwf_example-project/blob/main/tests/test_handler_memorize_cache.py>`_ 的测试用例. 测试用例仅仅是用同一个 key 调用了两次 ``main`` 函数, 然后比较 item 的 title 是不是一样. 是一样说明缓存起作用了.

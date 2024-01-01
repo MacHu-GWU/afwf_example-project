@@ -12,7 +12,6 @@ sub packages and modules
 
     handlers <handlers/__init__>
     cache <cache>
-    fuzzymatch <fuzzymatch>
     settings <settings>
     workflow <workflow>
     
