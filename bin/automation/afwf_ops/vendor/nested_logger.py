@@ -41,7 +41,6 @@ from datetime import datetime
 
 __version__ = "0.2.1"
 
-
 def create_logger(
     name: T.Optional[str] = None,
     level: int = logging.INFO,
@@ -763,50 +762,3 @@ class NestedLogger:
             if disable:
                 for handler in existing_handlers:
                     self._logger.handlers.append(handler)
-
-
-logger = NestedLogger()
-
-
-if __name__ == "__main__":
-    import time
-
-    def test_ruler():
-        ruler("Hello")
-        ruler("Hello", length=40)
-        ruler("Hello", char="=")
-        ruler("Hello", corner="+")
-        ruler("Hello", align=AlignEnum.left)
-        ruler("Hello", align=AlignEnum.right)
-        ruler("Hello", left_padding=10)
-        ruler("Hello", right_padding=10)
-
-    def test_nested_logger_nested_context_manager():
-        with logger.nested(0):
-            logger.ruler("nested 0 start")
-            logger.info("nested 0")
-
-            with logger.nested(1):
-                logger.ruler("nested 1 start")
-                logger.info("nested 1")
-                logger.ruler("nested 1 end")
-
-            logger.ruler("nested 0 end")
-
-    def test_nested_logger_pretty_log_decorator():
-        @logger.pretty_log(nest=1)
-        def my_func2(name: str):
-            time.sleep(1)
-            logger.info(f"{name} do something in my func 2")
-
-        @logger.pretty_log()
-        def my_func1(name: str):
-            time.sleep(1)
-            logger.info(f"{name} do something in my func 1")
-            my_func2(name="bob")
-
-        my_func1(name="alice")
-
-    # test_ruler()
-    # test_nested_logger_nested_context_manager()
-    # test_nested_logger_pretty_log_decorator()

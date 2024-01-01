@@ -4,10 +4,12 @@ version = "0.1.1"
 description = "A sample Alfred Workflow Python project"
 authors = ["Sanhe Hu <husanhe@gmail.com>"]
 
-
+# ------------------------------------------------------------------------------
+# core dependencies for deployment
+# ------------------------------------------------------------------------------
 [tool.poetry.dependencies]
 python = "^3.8"
-afwf = "0.5.2"
+afwf = "0.6.1"
 pathlib_mate = " 1.3.1"
 diskcache = "5.4.0"
 sqlitedict = "2.1.0"
@@ -18,10 +20,11 @@ fuzzywuzzy = "0.18.0"
 [tool.poetry.dev-dependencies]
 # Don't put anything here, explicit is better than implicit
 
-
+# ------------------------------------------------------------------------------
+# addtitional dependencies for development
+# ------------------------------------------------------------------------------
 [tool.poetry.group.dev]
 optional = true
-
 
 [tool.poetry.group.dev.dependencies]
 twine = "3.8.0"
@@ -29,10 +32,11 @@ wheel = "0.37.1"
 rich = "12.6.0"
 fire = "0.5.0"
 
-
+# ------------------------------------------------------------------------------
+# addtitional dependencies for building documentations
+# ------------------------------------------------------------------------------
 [tool.poetry.group.doc]
 optional = true
-
 
 [tool.poetry.group.doc.dependencies]
 Sphinx = "5.3.0"
@@ -59,15 +63,31 @@ docfly = "2.0.1"
 # you need to install awscli to upload the documentation website to S3
 # awscli has werid dependency issue, so we install it out side of poetry
 
-
+# ------------------------------------------------------------------------------
+# addtitional dependencies for testing
+# ------------------------------------------------------------------------------
 [tool.poetry.group.test]
 optional = true
-
 
 [tool.poetry.group.test.dependencies]
 pytest = "6.2.5"
 pytest-cov = "2.12.1"
 
+# ------------------------------------------------------------------------------
+# addtitional dependencies for automation shell scripts
+# ------------------------------------------------------------------------------
+[tool.poetry.group.auto]
+optional = true
+
+[tool.poetry.group.auto.dependencies]
+# Python dependency management
+poetry = "1.6.1" # this version should match the version in github action yml file
+# parse pyproject.toml file
+tomli = "2.0.1"
+# beautiful formatting for console output
+rich = "12.6.0"
+# build CLI app made easy
+fire = "0.5.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

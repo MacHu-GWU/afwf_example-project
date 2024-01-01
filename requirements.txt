@@ -1,6 +1,6 @@
-afwf==0.5.1 ; python_version >= "3.8" and python_version < "4.0" \
-    --hash=sha256:425bee78462ff98cd016b18c0bfa1ea3f495abe1f3a4f45b9d2d4640bc3fa4f4 \
-    --hash=sha256:c530d841c6be747be3d97c75498610c2e892c8b4a9b87cc74f000ac33cfe8957
+afwf==0.6.1 ; python_version >= "3.8" and python_version < "4.0" \
+    --hash=sha256:183e71b184a88817c6e3e8e095d01a164043df464f8d6536e1e07e812782ffa2 \
+    --hash=sha256:a1032615a4bf6cfd8dd4180be8ae9cf66e829d80fdb652ad34c96c779321cdec
 attrs-mate==1.1.1 ; python_version >= "3.8" and python_version < "4.0" \
     --hash=sha256:231d86028418625cd8f0098ef918fba509df683f07a2c8001db655fc8a0e98e2 \
     --hash=sha256:cfde2b74c6fef53bac5c8550c220811f79d7d35e96eedf053cd787efe7320b63
