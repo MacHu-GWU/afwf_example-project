@@ -1,9 +1,17 @@
 # -*- coding: utf-8 -*-
 
-import os
-import pytest
 from afwf_example.handlers.set_settings import handler
 from rich import print as rprint
+
+
+def test_parse_query():
+    assert handler.parse_query("") == dict(key=None, value=None)
+    assert handler.parse_query("abc") == dict(key="abc", value=None)
+    assert handler.parse_query("email alice@example.com") == dict(
+        key="email",
+        value="alice@example.com",
+    )
+
 
 def test():
     # no query, show list of key value

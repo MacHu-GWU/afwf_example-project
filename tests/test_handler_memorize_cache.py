@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import os
-import pytest
 from afwf_example.handlers.memorize_cache import handler
 
 
@@ -12,5 +10,6 @@ def test():
 
 
 if __name__ == "__main__":
-    basename = os.path.basename(__file__)
-    pytest.main([basename, "-s", "--tb=native"])
+    from afwf_example.tests import run_cov_test
+
+    run_cov_test(__file__, "afwf_example.handlers.memorize_cache", preview=False)

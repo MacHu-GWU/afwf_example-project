@@ -4,7 +4,7 @@
 omit =
     afwf_example/docs/*
     afwf_example/tests/*
-    afwf_example/vendors/*
+    afwf_example/vendor/*
     afwf_example/_version.py
 
 [report]

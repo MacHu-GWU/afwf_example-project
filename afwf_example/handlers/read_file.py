@@ -12,21 +12,22 @@ import afwf.api as afwf
 
 from ..paths import dir_project_home
 
+path_file = dir_project_home / "file.txt"
+
 
 @attrs.define
 class Handler(afwf.Handler):
     def main(self) -> afwf.ScriptFilter:
         sf = afwf.ScriptFilter()
-        path = dir_project_home / "file.txt"
-        if path.exists():
-            content = path.read_text()
+        if path_file.exists():
+            content = path_file.read_text()
             item = afwf.Item(
-                title=f"content of {path} is",
+                title=f"content of {path_file} is",
                 subtitle=content,
             )
         else:
             item = afwf.Item(
-                title=f"{path} does not exist!",
+                title=f"{path_file} does not exist!",
             )
             item.set_icon(afwf.IconFileEnum.error)
 
