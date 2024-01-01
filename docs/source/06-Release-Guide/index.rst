@@ -9,8 +9,8 @@ Summary
 
 Solution
 ------------------------------------------------------------------------------
-1. 首先运行一次 ``make cov`` 命令执行代码覆盖率单元测试, 确保 90% 以上的覆盖率. 不然你自己都说服不了自己你的 Workflow 会不会有严重的 Bug.
-2. 然后运行一次 ``make build-wf`` 命令从源代码构建 Alfred Workflow. 保证你即将发布的 Workflow 的代码跟你的代码库中一致.
+1. 首先运行一次 ``pyops cov`` 命令执行代码覆盖率单元测试, 确保 90% 以上的覆盖率. 不然你自己都说服不了自己你的 Workflow 会不会有严重的 Bug.
+2. 然后运行一次 ``python ./bin/s01_build_workflow.py`` 命令从源代码构建 Alfred Workflow. 保证你即将发布的 Workflow 的代码跟你的代码库中一致.
 3. 在 Alfred 中输入 ``?Workflow`` 进入 Alfred Workflow 菜单.
 4. 找到你的 Workflow, 点击右键呼出菜单, 然后点击 ``Export`` 进入导出页面.
 5. 给你的 Workflow 加上一些 Metadata. 例如:
