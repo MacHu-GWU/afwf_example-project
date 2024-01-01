@@ -7,14 +7,13 @@
 配合使用, 永远验证.
 """
 
-import sys
-import afwf
-import attr
+import attrs
+import afwf.api as afwf
 
 from ..paths import dir_project_home
 
 
-@attr.define
+@attrs.define
 class Handler(afwf.Handler):
     def main(self) -> afwf.ScriptFilter:
         sf = afwf.ScriptFilter()

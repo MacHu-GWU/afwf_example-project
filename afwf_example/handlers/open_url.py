@@ -18,11 +18,11 @@
 - 连接一个 Actions - Open Url 的控件, URL 的参数是 ``{var:open_url_arg}``.
 """
 
-import afwf
-import attr
+import attrs
+import afwf.api as afwf
 
 
-@attr.define
+@attrs.define
 class Handler(afwf.Handler):
     def main(self) -> afwf.ScriptFilter:
         sf = afwf.ScriptFilter()

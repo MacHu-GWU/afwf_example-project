@@ -10,14 +10,13 @@
 import typing as T
 import sys
 
-import afwf
-import attr
+import attrs
+import afwf.api as afwf
 
 from ..settings import settings, SettingsKeyEnum
-from ..fuzzymatch import ItemFuzzyMatcher
 
 
-@attr.define
+@attrs.define
 class SetSettingValueHandler(afwf.Handler):
     def main(self, key: str, value: str) -> afwf.ScriptFilter:
         sf = afwf.ScriptFilter()
@@ -38,7 +37,7 @@ class SetSettingValueHandler(afwf.Handler):
 set_setting_value_handler = SetSettingValueHandler(id="set_setting_value")
 
 
-@attr.define
+@attrs.define
 class Handler(afwf.Handler):
     def main(
         self,

@@ -32,13 +32,14 @@ Python 逻辑. 而这个 bash command 就是 item 的 argument. 这个 ``WriteRe
 """
 
 import sys
-import afwf
-import attr
+
+import attrs
+import afwf.api as afwf
 
 from ..paths import dir_project_home
 
 
-@attr.define
+@attrs.define
 class WriteRequestHandler(afwf.Handler):
     def main(self, content: str) -> afwf.ScriptFilter:
         sf = afwf.ScriptFilter()
@@ -58,7 +59,7 @@ class WriteRequestHandler(afwf.Handler):
 write_request_handler = WriteRequestHandler(id="write_request_handler")
 
 
-@attr.define
+@attrs.define
 class Handler(afwf.Handler):
     def main(self, content: str) -> afwf.ScriptFilter:
         sf = afwf.ScriptFilter()

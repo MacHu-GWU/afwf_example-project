@@ -4,18 +4,18 @@
 This handler will always raise an error. It is used for testing purpose.
 """
 
-import afwf
-import attr
-from afwf.workflow import log_debug_info
+import typing as T
+import attrs
+import afwf.api as afwf
 
 
-@attr.define
+@attrs.define
 class Handler(afwf.Handler):
     def main(self) -> afwf.ScriptFilter:
-        log_debug_info("before raising the error")
+        afwf.log_debug_info("before raising the error")
         raise Exception("raise this error intentionally")
 
-    def parse_query(self, query: str):
+    def parse_query(self, query: str) -> T.Dict[str, T.Any]:
         return {}
 
 

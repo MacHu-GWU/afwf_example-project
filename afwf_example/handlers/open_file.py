@@ -19,12 +19,12 @@
 - 连接一个 Actions - Open File 的控件, File 的参数是 ``{var:open_file_path}``.
 """
 
-import afwf
-import attr
+import attrs
 from pathlib_mate import Path
+import afwf.api as afwf
 
 
-@attr.define
+@attrs.define
 class Handler(afwf.Handler):
     def main(self) -> afwf.ScriptFilter:
         sf = afwf.ScriptFilter()

@@ -15,13 +15,14 @@
 """
 
 import random
-import afwf
-import attr
+
+import attrs
+import afwf.api as afwf
 
 from ..cache import cache
 
 
-@attr.define
+@attrs.define
 class Handler(afwf.Handler):
     @cache.memoize(tag="memorize_cache", expire=5)
     def main(self, key: str) -> afwf.ScriptFilter:
