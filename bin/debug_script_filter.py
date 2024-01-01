@@ -1,16 +1,44 @@
 # -*- coding: utf-8 -*-
 
-from automation.alfred import refresh_code, debug
+import json
+from automation.ops import path_bin_python, dir_workflow
+from afwf_example.handlers import (
+    error,
+    memorize_cache,
+    open_file,
+    open_url,
+    read_file,
+    set_settings,
+    view_settings,
+    write_file,
+)
+from rich import print as rprint
 
-bin_python = "/Users/sanhehu/.pyenv/versions/3.8.11/bin/python"
-handler_id = "view_settings"
-query = ""
+# verbose = True
+verbose = False
 
-# handler_id = "set_settings"
+# handler = error.handler
+# handler = open_file.handler
+# handler = open_url.handler
+# handler = read_file.handler
+
+# handler = set_settings.handler
 # query = "email my@email.com"
 
-# handler_id = "set_setting_value"
+# handler = set_settings.set_setting_value_handler
 # query = "email my@email.com"
 
-refresh_code()
-debug(bin_python, handler_id, query)
+# handler = view_settings.handler
+# query = ""
+
+# handler = write_file.handler
+# query = "hello"
+
+handler = memorize_cache.handler
+query = "my_key"
+
+res = handler.run_script_command(path_bin_python, dir_workflow, query, verbose=verbose)
+if res is None:
+    print(f"res = {res}")
+else:
+    rprint(json.loads(res))

@@ -10,7 +10,7 @@
 import afwf
 import attr
 
-from ..settings import settings, SettingsKeyEnum
+from ..settings import path_settings_sqlite, settings, SettingsKeyEnum
 
 
 @attr.define
@@ -21,6 +21,7 @@ class Handler(afwf.Handler):
             value = settings.get(settings_key.value)
             item = afwf.Item(
                 title=f"settings.{settings_key} = {value!r}",
+                subtitle=f"settings are stored at {path_settings_sqlite}",
             )
             sf.items.append(item)
         return sf

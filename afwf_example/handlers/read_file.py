@@ -22,12 +22,12 @@ class Handler(afwf.Handler):
         if path.exists():
             content = path.read_text()
             item = afwf.Item(
-                title=f"content of file.txt is",
+                title=f"content of {path} is",
                 subtitle=content,
             )
         else:
             item = afwf.Item(
-                title="file.txt does not exist!",
+                title=f"{path} does not exist!",
             )
             item.set_icon(afwf.IconFileEnum.error)
 

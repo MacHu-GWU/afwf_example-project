@@ -22,7 +22,6 @@ class SetSettingValueHandler(afwf.Handler):
     def main(self, key: str, value: str) -> afwf.ScriptFilter:
         sf = afwf.ScriptFilter()
         settings[key] = value
-        print(f"key = {key}, value = {value}")
         return sf
 
     def parse_query(self, query: str):
