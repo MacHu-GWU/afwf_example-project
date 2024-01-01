@@ -14,6 +14,8 @@ from ..paths import dir_project_home
 
 path_file = dir_project_home / "file.txt"
 path_file.parent.mkdir(parents=True, exist_ok=True)
+if path_file.exists() is False:
+    path_file.write_text("hello world")
 
 
 @attrs.define
